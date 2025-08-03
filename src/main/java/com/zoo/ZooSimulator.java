@@ -32,7 +32,6 @@ public class ZooSimulator {
             Andrii.checkAnimalEnergyLevel(lion);
 
 
-            // Пауза перед следующей тваринкой
             System.out.println("\nНатисніть Enter, щоб перейти до наступної тваринки...");
             scanner.nextLine();
 
@@ -43,7 +42,6 @@ public class ZooSimulator {
             elephant.sleep();
             Andrii.checkAnimalEnergyLevel(elephant);
 
-            // Пауза перед следующей тваринкой
             System.out.println("\nНатисніть Enter, щоб перейти до наступної тваринки...");
             scanner.nextLine();
 
@@ -53,7 +51,6 @@ public class ZooSimulator {
             penguin.sleep();
             Andrii.checkAnimalEnergyLevel(penguin);
 
-// Пауза перед следующей тваринкой
             System.out.println("\nНатисніть Enter, щоб перейти до наступної тваринки...");
             scanner.nextLine();
 

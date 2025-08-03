@@ -17,7 +17,7 @@ public class Bird extends Animal {
     public void fly()
     { changeEnergy(15);
     }
-    //Додає метод public void fly() - політ (зменшує енергію на 15)
+
 }
 
 
