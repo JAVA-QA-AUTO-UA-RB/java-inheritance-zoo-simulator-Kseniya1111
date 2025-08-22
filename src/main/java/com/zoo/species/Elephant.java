@@ -5,9 +5,9 @@ import com.zoo.animals.IPlayable;
 import com.zoo.animals.ISleepable;
 import com.zoo.animals.Mammal;
 
-public class Elephant  extends Mammal  implements IEatable, IPlayable, ISleepable {
-    public Elephant (String name, boolean isGroomLong, int protect, String furColor, int age, double weight) {
-        super(name, isGroomLong, protect, furColor, age,  weight);
+public class Elephant extends Mammal implements IEatable, IPlayable, ISleepable {
+    public Elephant(String name, boolean isGroomLong, int protect, String furColor, int age, double weight) {
+        super(name, isGroomLong, protect, furColor, age, weight);
     }
 
     @Override
@@ -31,26 +31,20 @@ public class Elephant  extends Mammal  implements IEatable, IPlayable, ISleepabl
 
     }
 
-    public void walk()
-    { changeEnergy(-70);
-        System.out.println("Слон дуже втомився, хоче їсти та спати");}
-
     public void spraySelf() {
         changeEnergy(-30);
         System.out.println("Elephant  has spent a lot of water!");
 
     }
 
-    public void move ()
-    {
+    public void move() {
         changeEnergy(-40);
         System.out.println("Слон вирішив прогулятися та підтримати соціальні зв'язки");
 
     }
 
     @Override
-    public void play ()
-    {
+    public void play() {
         changeEnergy(-20);
         System.out.println("Слон награвся");
 

@@ -2,24 +2,27 @@ package com.zoo.zookeper;
 
 
 import com.zoo.animals.Animal;
-import com.zoo.animals.IEatable;
-import com.zoo.animals.IPlayable;
+
 
 public class ZooKeeper {
-    private String name;
+    private final String name;
 
-    public void feedAnimal(IEatable animal) {
-        String animalType = animal.getClass().getSimpleName();
-        animal.changeEnergy(+5);
-        System.out.println("Наглядач " + this.name + " годує тварину " + animalType +  " на ім'я " + animal.getName());
+    public ZooKeeper(String name) {
+        this.name = name;
+    }
+
+    public void feedAnimal(Animal animal) {
+        System.out.println("Наглядач " + this.name + " годує тварину  на ім'я " + animal.getName());
+
+        animal.eat();
         System.out.println("Тваринка поїла та задоволена, її енергії знов стало більше:) ");
     }
 
 
-    public void playWithAnimal(IPlayable animal)
-    { animal.changeEnergy(-25);
-        System.out.println("Тваринка " +  animal.getName() + " захотіла гратися з " + this.name + " , гралися вони довгенько, тому енергії в не поменьшало... ");
-        animal.feedbackToPlay();
+    public void playWithAnimal(Animal animal) {
+        animal.play();
+        System.out.println("Тваринка " + animal.getName() + " захотіла гратися з " + this.name + " , гралися вони довгенько, тому енергії в не поменьшало... ");
+
 
     }
 
@@ -38,10 +41,8 @@ public class ZooKeeper {
 
     }
 
-    public  ZooKeeper (String name) {
-        this.name = name;
-    }
-    public String getZooKeeperName() {
+
+    public String getName() {
         return name;
     }
 }

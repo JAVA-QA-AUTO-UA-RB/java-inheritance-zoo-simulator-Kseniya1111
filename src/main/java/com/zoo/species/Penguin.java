@@ -5,10 +5,10 @@ import com.zoo.animals.IEatable;
 import com.zoo.animals.IPlayable;
 import com.zoo.animals.ISleepable;
 
-public class Penguin extends Bird  implements IPlayable, IEatable, ISleepable {
+public class Penguin extends Bird implements IPlayable, IEatable, ISleepable {
 
-    public Penguin (String name, int age, double weight, double wingSpan ) {
-        super(name,age,weight,wingSpan);
+    public Penguin(String name, int age, double weight, double wingSpan) {
+        super(name, age, weight, wingSpan);
     }
 
     @Override
@@ -18,8 +18,7 @@ public class Penguin extends Bird  implements IPlayable, IEatable, ISleepable {
     }
 
     @Override
-    public void makeSound ()
-    {
+    public void makeSound() {
         System.out.println("Кря-кря!");
     }
 
@@ -30,31 +29,28 @@ public class Penguin extends Bird  implements IPlayable, IEatable, ISleepable {
     }
 
 
-
-    private void swim ()
-    {
-        changeEnergy(-20);
-        System.out.println("Пінгвін поплавав  за рибами у льодяній воді.");
-    }
     @Override
-    public void fly()
-    { swim();
+    public void fly() {
+        swim();
     }
 
     @Override
-    public void uniqueBirdAction ()
-    {
+    public void uniqueBirdAction() {
         changeEnergy(-20);
         System.out.println("Пінгвін доглядає за пташенятами");
 
     }
+
     @Override
-    public void play ()
-    {
+    public void play() {
         changeEnergy(-20);
         System.out.println("пінгвін погрався");
 
     }
 
+    private void swim() {
+        changeEnergy(-20);
+        System.out.println("Пінгвін поплавав  за рибами у льодяній воді.");
+    }
 
 }

@@ -1,7 +1,7 @@
 package com.zoo.animals;
 
 public abstract class Mammal extends Animal {
-    boolean isGroomLong;
+    boolean selfProtectionLevel;
     int protect;
     protected String furColor;
     protected int age;
@@ -9,13 +9,12 @@ public abstract class Mammal extends Animal {
 
     public Mammal(String name, boolean isGroomLong, int protect, String furColor, int age, double weight) {
         super(name);
-        this.isGroomLong = isGroomLong;
+        this.selfProtectionLevel = isGroomLong;
         this.protect = protect;
         this.furColor = furColor;
         this.age = age;
         this.weight = weight;
     }
-
 
 
     @Override
@@ -24,13 +23,14 @@ public abstract class Mammal extends Animal {
     }
 
     public void groom() {
-        if (isGroomLong) {
+        if (selfProtectionLevel) {
             protect = protect * 2;
-        } else
+        } else {
             System.out.println("Ця тварина мае звичайний ступинь захисту");
+        }
 
     }
 
 
-     protected abstract void move();
+    protected abstract void move();
 }

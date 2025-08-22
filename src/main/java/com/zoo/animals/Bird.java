@@ -1,6 +1,6 @@
 package com.zoo.animals;
 
- abstract public class Bird extends Animal {
+abstract public class Bird extends Animal {
     protected double wingSpan;
     protected int age;
     protected double weight;
@@ -17,8 +17,8 @@ package com.zoo.animals;
         System.out.println("YI YI YI");
     }
 
-    public void fly()
-    { changeEnergy(-15);
+    public void fly() {
+        changeEnergy(-15);
     }
 
     abstract protected void uniqueBirdAction();

@@ -1,26 +1,24 @@
 package com.zoo;
+
 import java.util.Scanner;
+
 import com.zoo.animals.Animal;
-import com.zoo.animals.IPlayable;
-import com.zoo.species.Eagle;
-import com.zoo.species.Elephant;
-import com.zoo.species.Lion;
-import com.zoo.species.Penguin;
+import com.zoo.species.*;
 import com.zoo.zookeper.ZooKeeper;
 
 public class ZooSimulator {
 
     public static void main(String[] args) {
         Lion lion = new Lion("Simba", 2, 35.2, false, 100, "brown");
-        Eagle eagle= new Eagle("Hugo", 1, 10,3);
-        Penguin penguin= new Penguin("Robby", 1, 20, 0.5);
+        Eagle eagle = new Eagle("Hugo", 1, 10, 3);
+        Penguin penguin = new Penguin("Robby", 1, 20, 0.5);
         Elephant elephant = new Elephant("Victor", false, 15, "grey", 20, 200.6);
 
         ZooKeeper Andrii = new ZooKeeper("Andrii");
         String answer;
         do {
             System.out.println("Вітаю тебе в зоопарку! Такі тваринки як лев Сімба, орел Х'юго, пінгвін Роббі та слон Віктор є  його постійними мешканцями!");
-            System.out.println("Розпочнемо наш день з тваринками:) та з інструктором " + Andrii.getZooKeeperName());
+            System.out.println("Розпочнемо наш день з тваринками:) та з інструктором " + Andrii.getName());
 
 
             Scanner scanner = new Scanner(System.in);
@@ -39,7 +37,7 @@ public class ZooSimulator {
             Andrii.feedAnimal(elephant);
             Andrii.playWithAnimal(elephant);
             elephant.spraySelf();
-            elephant.walk();
+            elephant.move();
             elephant.sleep();
             Andrii.checkAnimalEnergyLevel(elephant);
 
