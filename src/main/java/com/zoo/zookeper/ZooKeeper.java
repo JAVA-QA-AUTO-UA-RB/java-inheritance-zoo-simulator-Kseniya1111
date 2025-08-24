@@ -2,6 +2,7 @@ package com.zoo.zookeper;
 
 
 import com.zoo.animals.Animal;
+import com.zoo.animals.Mammal;
 
 
 public class ZooKeeper {
@@ -12,10 +13,17 @@ public class ZooKeeper {
     }
 
     public void feedAnimal(Animal animal) {
-        System.out.println("Наглядач " + this.name + " годує тварину  на ім'я " + animal.getName());
+        if (animal instanceof Mammal mammal) {
+            System.out.println("Наглядач " + this.name +
+                    " годує тварину на ім'я " + animal.getName() +
+                    " з рівнем захисту: " + mammal.getProtect());
+        } else {
+            System.out.println("Наглядач " + this.name +
+                    " годує тварину на ім'я " + animal.getName());
+        }
 
         animal.eat();
-        System.out.println("Тваринка поїла та задоволена, її енергії знов стало більше:) ");
+        System.out.println("Тваринка поїла та задоволена, її енергії знов стало більше :) ");
     }
 
 

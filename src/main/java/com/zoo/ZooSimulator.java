@@ -27,6 +27,7 @@ public class ZooSimulator {
 
             Andrii.feedAnimal(lion);
             Andrii.playWithAnimal(lion);
+            lion.groom();
             lion.hunt();
             Andrii.checkAnimalEnergyLevel(lion);
 
@@ -48,6 +49,7 @@ public class ZooSimulator {
             Andrii.playWithAnimal(penguin);
             penguin.fly();
             penguin.sleep();
+            penguin.uniqueBirdAction();
             Andrii.checkAnimalEnergyLevel(penguin);
 
             System.out.println("\nНатисніть Enter, щоб перейти до наступної тваринки...");
@@ -57,6 +59,7 @@ public class ZooSimulator {
             Andrii.playWithAnimal(eagle);
             eagle.fly();
             eagle.sleep();
+            eagle.uniqueBirdAction();
             Andrii.checkAnimalEnergyLevel(eagle);
 
             System.out.println("\nОсь і день минув! Натисніть Enter, щоб переглянути енергію звірят...");

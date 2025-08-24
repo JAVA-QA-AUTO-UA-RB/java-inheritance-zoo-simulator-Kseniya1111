@@ -6,6 +6,7 @@ public class Lion extends Mammal {
 
     public Lion(String name, int age, double weight, boolean isGroomLong, int protect, String furColor) {
         super(name, isGroomLong, protect, furColor, age, weight);
+
     }
 
     @Override
@@ -24,6 +25,13 @@ public class Lion extends Mammal {
     public void eat() {
         changeEnergy(+40);
         System.out.println("РРРРРРРРР! - каже лев коли поїв");
+
+    }
+
+    @Override
+    public void groom() {
+        protect += 50;
+        System.out.println("Лев поправив гриву і став виглядати ще могутніше! Захист: " + protect);
 
     }
 

@@ -19,13 +19,9 @@ public abstract class Animal implements IEatable, ISleepable, IPlayable {
 
     public void changeEnergy(int amount) {
         energyLevel += amount;
-        if (energyLevel < 0) {
-            energyLevel = 0;
+        if (energyLevel > 100) {
+            energyLevel = 100;
         }
-    }
-
-    public void feedbackToPlay() {
-        makeSound();
     }
 
     public void displayInfo() {
@@ -35,14 +31,6 @@ public abstract class Animal implements IEatable, ISleepable, IPlayable {
     public String getName() {
         return name;
     }
-
-    // public int getAge() {
-    //     return age;
-    //  }
-
-    //  public double getWeight() {
-    //     return weight;
-    //  }
 
     public int getEnergyLevel() {
         return energyLevel;

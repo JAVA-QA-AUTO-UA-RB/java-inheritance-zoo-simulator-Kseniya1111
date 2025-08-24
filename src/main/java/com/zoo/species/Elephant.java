@@ -34,6 +34,7 @@ public class Elephant extends Mammal implements IEatable, IPlayable, ISleepable 
     public void spraySelf() {
         changeEnergy(-30);
         System.out.println("Elephant  has spent a lot of water!");
+        groom();
 
     }
 
@@ -48,6 +49,12 @@ public class Elephant extends Mammal implements IEatable, IPlayable, ISleepable 
         changeEnergy(-20);
         System.out.println("Слон награвся");
 
+    }
+
+    @Override
+    public void groom() {
+        protect += 30;
+        System.out.println("Слон потоптав землю і підняв пил — тепер його важко дістати. Захист: " + protect);
     }
 
 }

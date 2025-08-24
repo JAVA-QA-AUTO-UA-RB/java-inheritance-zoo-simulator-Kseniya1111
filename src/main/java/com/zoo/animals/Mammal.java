@@ -1,15 +1,15 @@
 package com.zoo.animals;
 
 public abstract class Mammal extends Animal {
-    boolean selfProtectionLevel;
-    int protect;
+    boolean hasSpecialProtection;
+    protected int protect;
     protected String furColor;
     protected int age;
     protected double weight;
 
     public Mammal(String name, boolean isGroomLong, int protect, String furColor, int age, double weight) {
         super(name);
-        this.selfProtectionLevel = isGroomLong;
+        this.hasSpecialProtection = isGroomLong;
         this.protect = protect;
         this.furColor = furColor;
         this.age = age;
@@ -22,14 +22,12 @@ public abstract class Mammal extends Animal {
         System.out.println("YYYYYY");
     }
 
-    public void groom() {
-        if (selfProtectionLevel) {
-            protect = protect * 2;
-        } else {
-            System.out.println("Ця тварина мае звичайний ступинь захисту");
-        }
-
+    public int getProtect() {
+        return protect;
     }
+
+
+    public abstract void groom();
 
 
     protected abstract void move();
