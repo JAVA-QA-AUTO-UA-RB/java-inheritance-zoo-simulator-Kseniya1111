@@ -43,7 +43,7 @@ public class Eagle extends Bird {
     @Override
     public void play() {
         changeEnergy(-20);
-        System.out.println("Іііііііііі! - каже орел коли погрався зі своїми дитинчатами");
+        System.out.println("Орел грається зі своїми дитинчатами");
 
     }
 

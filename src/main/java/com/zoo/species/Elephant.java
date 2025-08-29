@@ -1,11 +1,8 @@
 package com.zoo.species;
 
-import com.zoo.animals.IEatable;
-import com.zoo.animals.IPlayable;
-import com.zoo.animals.ISleepable;
 import com.zoo.animals.Mammal;
 
-public class Elephant extends Mammal implements IEatable, IPlayable, ISleepable {
+public class Elephant extends Mammal {
     public Elephant(String name, boolean isGroomLong, int protect, String furColor, int age, double weight) {
         super(name, isGroomLong, protect, furColor, age, weight);
     }
@@ -13,7 +10,7 @@ public class Elephant extends Mammal implements IEatable, IPlayable, ISleepable 
     @Override
     public void sleep() {
         changeEnergy(+30);
-        System.out.println("Труба-ба-ба! - каже слон, коли виспався");
+        System.out.println("Слон,  ненадовго задрімав, енергії в нього після цього побільшало");
 
     }
 
@@ -27,12 +24,12 @@ public class Elephant extends Mammal implements IEatable, IPlayable, ISleepable 
     @Override
     public void eat() {
         changeEnergy(+40);
-        System.out.println("Труба-ба-ба! - каже слон, коли поїв");
+        System.out.println("Cлон дуже щасливий, бо поїв");
 
     }
 
     public void spraySelf() {
-        changeEnergy(-30);
+        changeEnergy(30);
         System.out.println("Elephant  has spent a lot of water!");
         groom();
 
@@ -47,7 +44,7 @@ public class Elephant extends Mammal implements IEatable, IPlayable, ISleepable 
     @Override
     public void play() {
         changeEnergy(-20);
-        System.out.println("Слон награвся");
+        System.out.println("Слон грається із своїм дитинчам");
 
     }
 

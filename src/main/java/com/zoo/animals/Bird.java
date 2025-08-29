@@ -2,15 +2,16 @@ package com.zoo.animals;
 
 abstract public class Bird extends Animal {
     protected double wingSpan;
-    protected int age;
-    protected double weight;
 
 
     public Bird(String name, int age, double weight, double wingSpan) {
         super(name);
         this.wingSpan = wingSpan;
-
+        this.age = age;
+        this.weight = weight;
     }
+
+    abstract protected void uniqueBirdAction();
 
     @Override
     public void makeSound() {
@@ -21,6 +22,5 @@ abstract public class Bird extends Animal {
         changeEnergy(-15);
     }
 
-    abstract protected void uniqueBirdAction();
 
 }

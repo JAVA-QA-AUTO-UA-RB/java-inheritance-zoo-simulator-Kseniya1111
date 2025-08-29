@@ -24,7 +24,7 @@ public class Lion extends Mammal {
     @Override
     public void eat() {
         changeEnergy(+40);
-        System.out.println("РРРРРРРРР! - каже лев коли поїв");
+        System.out.println("Лев  поїв та задоволений");
 
     }
 
@@ -49,7 +49,7 @@ public class Lion extends Mammal {
     @Override
     public void play() {
         changeEnergy(-20);
-        System.out.println("РРРРРРРРР! - каже лев коли погрався");
+        System.out.println("Лев грається зі своїм хвостом");
 
     }
 }

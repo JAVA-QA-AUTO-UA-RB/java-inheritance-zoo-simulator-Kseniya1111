@@ -4,8 +4,6 @@ public abstract class Mammal extends Animal {
     boolean hasSpecialProtection;
     protected int protect;
     protected String furColor;
-    protected int age;
-    protected double weight;
 
     public Mammal(String name, boolean isGroomLong, int protect, String furColor, int age, double weight) {
         super(name);
@@ -16,19 +14,11 @@ public abstract class Mammal extends Animal {
         this.weight = weight;
     }
 
-
-    @Override
-    public void makeSound() {
-        System.out.println("YYYYYY");
-    }
+    protected abstract void move();
 
     public int getProtect() {
         return protect;
     }
 
-
     public abstract void groom();
-
-
-    protected abstract void move();
 }

@@ -5,7 +5,7 @@ import com.zoo.animals.IEatable;
 import com.zoo.animals.IPlayable;
 import com.zoo.animals.ISleepable;
 
-public class Penguin extends Bird implements IPlayable, IEatable, ISleepable {
+public class Penguin extends Bird {
 
     public Penguin(String name, int age, double weight, double wingSpan) {
         super(name, age, weight, wingSpan);
@@ -44,7 +44,7 @@ public class Penguin extends Bird implements IPlayable, IEatable, ISleepable {
     @Override
     public void play() {
         changeEnergy(-20);
-        System.out.println("пінгвін погрався");
+        System.out.println("Пінгвін грається зі своїми пташенятами");
 
     }
 

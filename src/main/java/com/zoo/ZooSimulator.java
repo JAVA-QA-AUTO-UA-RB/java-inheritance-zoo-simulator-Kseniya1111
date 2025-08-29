@@ -27,8 +27,10 @@ public class ZooSimulator {
 
             Andrii.feedAnimal(lion);
             Andrii.playWithAnimal(lion);
+            lion.makeSound();
             lion.groom();
             lion.hunt();
+            lion.move();
             Andrii.checkAnimalEnergyLevel(lion);
 
 
@@ -37,6 +39,7 @@ public class ZooSimulator {
 
             Andrii.feedAnimal(elephant);
             Andrii.playWithAnimal(elephant);
+            elephant.makeSound();
             elephant.spraySelf();
             elephant.move();
             elephant.sleep();
@@ -47,6 +50,7 @@ public class ZooSimulator {
 
             Andrii.feedAnimal(penguin);
             Andrii.playWithAnimal(penguin);
+            penguin.makeSound();
             penguin.fly();
             penguin.sleep();
             penguin.uniqueBirdAction();
@@ -57,6 +61,7 @@ public class ZooSimulator {
 
             Andrii.feedAnimal(eagle);
             Andrii.playWithAnimal(eagle);
+            eagle.makeSound();
             eagle.fly();
             eagle.sleep();
             eagle.uniqueBirdAction();

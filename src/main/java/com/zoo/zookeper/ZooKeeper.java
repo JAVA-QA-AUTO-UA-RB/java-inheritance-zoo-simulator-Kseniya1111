@@ -23,7 +23,6 @@ public class ZooKeeper {
         }
 
         animal.eat();
-        System.out.println("Тваринка поїла та задоволена, її енергії знов стало більше :) ");
     }
 
 
